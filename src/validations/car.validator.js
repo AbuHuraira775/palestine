@@ -15,7 +15,13 @@ const getCar = {
   }),
 };
 
+const deleteCar = {
+  query: Joi.object().keys({
+    name: Joi.string().required(),
+  }),
+}
 module.exports = {
   createCat,
-  getCar
+  getCar,
+  deleteCar
 };

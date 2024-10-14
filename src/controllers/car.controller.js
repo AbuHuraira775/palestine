@@ -14,7 +14,13 @@ const getCar = catchAsync(async (req, res) => {
   res.send(car);
 });
 
+const deleteCar = catchAsync(async (req, res) => {
+  await carService.deleteCar(req.query.name);
+  res.status(httpStatus.NO_CONTENT).send();
+});
+
 module.exports = {
   createCar,
   getCar,
+  deleteCar
 };

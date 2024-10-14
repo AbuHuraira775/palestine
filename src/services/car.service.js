@@ -11,7 +11,13 @@ const getCar = async (name) => {
     });
 }
 
+const deleteCar = async (name) => {
+    return await Car.deleteOne({
+        name
+    })
+}
 module.exports = {
     createCar,
-    getCar
+    getCar,
+    deleteCar
 };
