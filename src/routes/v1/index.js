@@ -3,7 +3,7 @@ const authRoute = require('./auth.route');
 const userRoute = require('./user.route');
 const docsRoute = require('./docs.route');
 const carRoute = require('./car.route');
-
+const palestineRoute = require('./palestine.route')
 
 const config = require('../../config/config');
 
@@ -21,6 +21,10 @@ const defaultRoutes = [
   {
     path: '/cars',
     route: carRoute,
+  },
+  {
+    path: '/palestine',
+    route: palestineRoute,
   },
 ];
 
