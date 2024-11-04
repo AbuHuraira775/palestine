@@ -16,6 +16,4 @@ router.post('/post-comment', validate(commentValidation.createComment), commentC
 router.get('/get-comment', validate(commentValidation.getComment), commentController.getComment);
 router.delete('/delete-comment', validate(commentValidation.deleteComment), commentController.deleteComment);
 
-
-
 module.exports = router;
