@@ -10,12 +10,12 @@ const createForum = catchAsync(async (req, res) => {
 });
 
 const getForum = catchAsync(async (req, res) => {
-  const forum = await forumService.getForum(req.query.title);
+  const forum = await forumService.getForum(req.params.id);
   res.send(forum);
 });
 
 const deleteForum = catchAsync(async (req, res) => {
-  await forumService.deleteForum(req.query.title);
+  await forumService.deleteForum(req.params.id);
   res.status(httpStatus.NO_CONTENT).send(); 
 });
 

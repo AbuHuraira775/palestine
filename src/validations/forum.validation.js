@@ -11,14 +11,14 @@ const createForum = {
 };
 
 const getForum = {
-  query: Joi.object().keys({
-    title: Joi.string().required(),
+  params: Joi.object().keys({
+    id: Joi.string().required(),
   }),
 };
 
 const deleteForum = {
-  query: Joi.object().keys({
-    title: Joi.string().required(),
+  params: Joi.object().keys({
+    id: Joi.string().required(),
   }),
 }
 module.exports = {
